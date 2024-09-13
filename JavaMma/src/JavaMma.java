@@ -11,7 +11,12 @@ public class JavaMma {
           l[4]= new Lutador(" Tsuname ", " São Paulo ", 31, 1.85f, 90.9f, 20, 2, 1);
           l[5]= new Lutador("Billy kane ", " USA ", 31, 1.80f, 100.9f, 11, 2, 1);
           
+         Luta UEC01 =new Luta();
+         UEC01.marcaLuta(l[0],l[1]);
+         UEC01.lutar();
          l[0].status();
+         l[1].status();
+                
     
 }
 }

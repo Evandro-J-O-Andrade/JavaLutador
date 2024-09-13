@@ -33,6 +33,29 @@ public void marcaLuta(Lutador l1, Lutador l2){
             this.desafiante.apresenta();
             
             Random aleatorio = new Random ();
+            int vencedor = aleatorio.nextInt(3);
+            System.out.println("====== O Resultado da Luta foi!========");
+            switch (vencedor) {
+                case 0:
+                    System.out.println("Empatou!");
+                    this.desafiado.empataLuta();
+                    this.desafiante.empataLuta();
+                    break;
+                case 1: 
+                    System.out.println("Vitoria do " + this.desafiado.getNome());
+                    this.desafiado.ganhaLuta();
+                    this.desafiante.perdeLuta();
+                    break;
+                case 2:
+                    System.out.println("Vitoria do " + this.desafiante.getNome());
+                    this.desafiante.ganhaLuta();
+                    this.desafiado.perdeLuta();
+                    break;
+    
+                default:
+                    throw new AssertionError();
+            }
+            System.out.println("============================================");
         }else{
             System.out.println("A Luta não pode acontecer!!");
         }
